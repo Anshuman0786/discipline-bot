@@ -20,7 +20,7 @@ def send_msg():
     msg = random.choice(messages)
     bot.send_message(chat_id=CHAT_ID, text=msg)
 
-schedule.every().day.at("18:00").do(send_msg)
+schedule.every(1).minutes.do(send_msg)
 
 while True:
     schedule.run_pending()
