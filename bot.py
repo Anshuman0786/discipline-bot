@@ -11,10 +11,8 @@ CHAT_ID = os.getenv("CHAT_ID")
 bot = Bot(token=TOKEN)
 
 messages = [
-"Did you code today?",
-"Stop scrolling and start coding.",
-"Time for exercise. Do 20 pushups.",
-"Consistency builds champions."
+"I Love You",
+"You Are My Sunshine",
 ]
 
 async def send_msg():
