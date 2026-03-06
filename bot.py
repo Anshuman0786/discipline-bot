@@ -2,6 +2,7 @@ import random
 import schedule
 import time
 import os
+import asyncio
 from telegram import Bot
 
 TOKEN = os.getenv("BOT_TOKEN")
@@ -16,11 +17,14 @@ messages = [
 "Consistency builds champions."
 ]
 
-def send_msg():
+async def send_msg():
     msg = random.choice(messages)
-    bot.send_message(chat_id=CHAT_ID, text=msg)
+    await bot.send_message(chat_id=CHAT_ID, text=msg)
 
-schedule.every(1).minutes.do(send_msg)
+def job():
+    asyncio.run(send_msg())
+
+schedule.every(1).minutes.do(job)
 
 while True:
     schedule.run_pending()
