@@ -1,10 +1,11 @@
 import random
 import schedule
 import time
+import os
 from telegram import Bot
 
-TOKEN = "8694082981:AAGPo8R1R8QlDxdVmO7xpmNasxc5jRBxl54"
-CHAT_ID = "5441803861"
+TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 bot = Bot(token=TOKEN)
 
