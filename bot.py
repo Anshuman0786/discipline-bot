@@ -3,8 +3,8 @@ import schedule
 import time
 from telegram import Bot
 
-TOKEN = "YOUR_BOT_TOKEN"
-CHAT_ID = "YOUR_CHAT_ID"
+TOKEN = "8694082981:AAGPo8R1R8QlDxdVmO7xpmNasxc5jRBxl54"
+CHAT_ID = "5441803861"
 
 bot = Bot(token=TOKEN)
 
